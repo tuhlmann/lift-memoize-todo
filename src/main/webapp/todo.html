@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+  <title>Templates</title>
+</head>
+<body class="lift:content_id=main">
+
+<div id="main" class="lift:surround?with=default;at=content">
+  <h2>Your todos:</h2>
+
+  <div class="todo-list-all-wrapper" data-name="todo-list-all-wrapper" data-lift="Todo">
+    <div class="box">
+      <ul class="todo-list" data-name="todo-list-wrap">
+        <li class="todo-item" data-name="todo-item">
+          <span class="todo-title" data-name="title"></span>
+          <span class="todo-toggle-done" data-name="toggle-done"></span>
+        </li>
+      </ul>
+    </div>
+    <div class="todo-filter-links">
+      <a href="Javascript:" data-name="todo-toggle-f-completed">Hide Completed</a>
+    </div>
+
+    <div style="clear:both"></div>
+
+    <form data-lift="form.ajax">
+      <div class="new-todo-form">
+        <label for="new-todo-title">To Do:</label><br>
+        <input class="new-todo-title" id="new-todo-title" name="title">
+        <button class="greenButton" type="submit">Add</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+</body>
+</html>
