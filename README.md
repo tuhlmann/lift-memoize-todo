@@ -20,6 +20,8 @@ $ ./sbt
 
 ````
 
+Note: You may need to `chmod 755 sbt` to make it executable.
+
 After downloading the interweb the site will be available at `http://localhost:8080`.
 
 In the menu to the left there's a link "ToDo" that will show the todo page.
