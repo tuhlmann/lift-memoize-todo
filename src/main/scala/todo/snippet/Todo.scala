@@ -2,7 +2,7 @@ package todo.snippet
 
 import net.liftweb.http.SHtml._
 import net.liftweb.http.js.{JsCmd, _}
-import net.liftweb.http.{RequestVar, SHtml, SessionVar}
+import net.liftweb.http.{RequestVar, SHtml}
 import net.liftweb.util.Helpers._
 
 import scala.xml.NodeSeq
@@ -12,7 +12,7 @@ case class TodoFilters(showCompleted: Boolean = true)
 
 object Todo {
 
-  object TodoItems extends SessionVar[List[TodoItem]](Nil)
+  object TodoItems extends RequestVar[List[TodoItem]](Nil)
   object TodoListFilters extends RequestVar(TodoFilters())
 
   def render: NodeSeq => NodeSeq = {
